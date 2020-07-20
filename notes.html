@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Meta elements give extra details the page like keywords, description, copyrights, subjects etc
+In character set, UTF-8 indicates the globally accepted encoding all the special characters?
+
+Any inline styling can be done using the <style> tag, JS code can be entered using script tag
+Any external css, js files can be linked to the page using the link tags.
+-->
+    <title>HTML Basics - Rahul</title>
+
+    <!-- Favicons: These are the icons that are shown next to the tab title. Image type can be png, jpg, icon etc, the type of the image file -->
+    <link rel="icon" type="image/jpg" href="image.jpg">
+
+  </head>
+  
+  <body>
+    <h1>HTML Basics - Rahul</h1>
+    <h3>Hi, I have covered most of the basic html tags in this page for demonstration. There is also some notes in the comments section. Hope you find it useful! Good luck.</h3><hr>
+
+    <h4>Headers - Using h1-h6 tags</h4>
+    <h1 id="top">Biggest header</h1>
+    <h3>Mid size header</h3>
+    <h6>Smallest header</h6>
+    <hr>
+
+    <h4>Paragraphs</h4>
+    <p>
+      This is a paragraph. And the line should end here, using a br tag.
+      <br/>
+      <b>bold</b>
+      <i>italics</i>
+    </p>
+    
+    <p title="appears on hovering on this paragraph">
+      This is another paragraph that has a title, hover to see.
+    </p>
+    
+    <p>
+    You           can see many spaces between 1 and &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 2 and that is because of nbs (Non Breaking Space).
+    </p>
+    <hr>
+    
+    <h4>Formatting</h4>
+    <p>Use 'strong' for bold as b is depricated, 'em' for italics instead of 'i', em stands for emphasis, 'u' for underline
+    </p>
+
+    <p>
+      Disk <strong>formatting is the process</strong> of <b>preparing</b> a <em>data storage device</em> such as a <i>hard <u>disk</u> drive</i>, solid-state drive, floppy disk or USB flash drive for initial use. In some cases, the formatting operation may also create one or more new file systems.
+    </p>
+    
+    <hr>
+
+  <h4>Links</h4>
+  <p>Links can be added using 'a' anchor tag and 'href' attribute. To open it in a new tab, use the 'target' attribute whose values can be:<br>
+_blank for new tab<br>
+_self for its own window (default)<br>
+_parent for opening in a document frame if there was one<br>
+_top opens in full body of window</p>
+  <a href="https://www.google.com" target="_blank">Link to google</a></br>
+    
+<p>   Internal Links: 
+Using the id, we can navigate to different areas of the page. Here, I have used the top id which I have given for the h1 element above, so the page scrolls to the top.
+</p>
+  <a href="#top">Link to top of the page<a>
+<p>   For relative links, give the relative path of the other html file in the href value   </p>
+    
+    <h4>Images</h4>
+
+    <img src="https://via.placeholder.com/800x300.jpg" alt="text to show if image does not load" title="place holder image" height="400" width="200">
+    <hr> 
+<p>     Block elements take as much width as they can. They are H1-H6, P, div
+and Inline elements dont take full width. They go side by side. They are Span, A links,  
+</p>
+    
+<p>     Div is a dummy element, just a block element mostly used for styling. Difference between div and p is that p has extra spacing above and below, and p is not nestable.
+</p>
+    
+    <hr>
+    
+<p>     Lists: ul is un-ordered list, ol is ordered list, li is list item
+ </p>
+    <h4>Unordered List</h4>
+    <ul>
+      <li>Num1</li>
+      <li>Num2</li>
+      <li>Num3</li>
+      <li>Num4</li>
+    </ul>
+    
+    <h4>Ordered List</h4>
+    <ol>
+      <li>Num1</li>
+      <li>Num2</li>
+      <li>Num3</li>
+      <li>Num4</li>
+    </ol>    
+    
+    <hr>
+
+    <h4>Table</h4>
+
+    <table border="1" width="100%">
+      <thead>
+        <tr>
+          <th>Col1</th>
+          <th>Col2</th>
+          <th>Col3</th>
+        </tr>        
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>R1C1</td>
+          <td>R1C2</td>
+          <td>R1C3</td>
+        </tr>
+        <tr>
+          <td>R2C1</td>
+          <td>R2C2</td>
+          <td>R2C3</td>
+        </tr>      
+        <tr>
+          <td>R3C1</td>
+          <td>R3C2</td>
+          <td>R3C3</td>
+        </tr> 
+        <tr>
+          <th>Foot1</th>
+          <th>Foot2</th>
+          <th>Foot3</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Merging rows and columns in Table - Improper</h4>
+
+    <table border="1" width="100%">
+      <thead>
+        <tr>
+          <th>Col1</th>
+          <th>Col2</th>
+          <th>Col3</th>
+        </tr>        
+      </thead>
+
+      <tbody>
+        <tr>
+          <td colspan="2">R1C1</td>
+          <td>R1C2</td>
+          <td>R1C3</td>
+        </tr>
+        <tr>
+          <td rowspan="2">R2C1</td>
+          <td>R2C2</td>
+          <td>R2C3</td>
+        </tr>      
+        <tr>
+          <td>R3C1</td>
+          <td>R3C2</td>
+          <td>R3C3</td>
+        </tr> 
+        <tr>
+          <th>Foot1</th>
+          <th>Foot2</th>
+          <th>Foot3</th>
+        </tr>
+      </tbody>
+    </table>
+
+    <h4>Merging rows and columns in Table - Proper</h4>
+
+    <table border="1" width="100%">
+      <thead>
+        <tr>
+          <th>Col1</th>
+          <th>Col2</th>
+          <th>Col3</th>
+        </tr>        
+      </thead>
+
+      <tbody>
+        <tr>
+          <td colspan="2">R1C1</td>
+          <td>R1C2</td>
+        </tr>
+        <tr>
+          <td rowspan="2">R2C1</td>
+          <td>R2C2</td>
+          <td>R2C3</td>
+        </tr>      
+        <tr>
+          <td>R3C2</td>
+          <td>R3C3</td>
+        </tr> 
+        <tr>
+          <th>Foot1</th>
+          <th>Foot2</th>
+          <th>Foot3</th>
+        </tr>
+      </tbody>
+    </table>
+    <hr>
+
+    <h3>Code Formatting </h3>
+    <pre>This       is     pre tag. Pre stands for formatted  text.
+    New lines, spaces etc 
+
+  all get considered.</pre>
+
+    This is regular text.<br/>
+    <code>This is using the code tag, generally used for file names</code><br/>
+    <samp>This is using the samp tag, used for sample code</samp><br/>
+    <kbd>This is using the kbd tag, used for indicating keyboard clicks</kbd><br/>
+    <var>This is using the var tag, for variables</var><br/>
+    <hr>
+
+    <h3>HTML Entities</h3>
+    <p>When we want to show the html elements with the tags like &lt;div&gt;'s, they don't show up. So we can use HTML Entities. They start with & and end with ;<br>
+      Use lt to represent < and gt for > <br>
+    Some entities:
+    <ul>
+      <li>&copy; : Copyright symbol</li>
+      <li>&bull; : Bullet symbol</li>
+      <li>&amp; : AND symbol</li>
+      <li>&lt; : Less than symbol</li>
+      <li>&gt; : Greater than symbol</li>
+      <li>&rarr; : Right arrow symbol</li>
+      <li>&larr; : Left arrow symbol</li>
+      <li>&raquo; : Double right chevrons</li>
+      <li>&laquo; : Double left chevrons</li>
+    </ul>
+
+  </p>
+    <hr>
+
+    <h3>Input fields</h3>
+    <form method="GET" action="div.html">
+      <div>
+        <label for="firstname">Input: First Name</label>
+        <input required="required" type="text" id="firstname">
+      </div>
+      <div>
+        <label>Input: Checkbox</label>
+        <input type="checkbox" name="check">
+      </div>
+      <div>
+        <label>Input: Radio</label>
+        <input type="radio" name="radio" value="1">1
+        <input type="radio" value="2">2
+        <input type="radio" value="3">3
+      </div>
+      <div>
+        <label>Input: Date</label>
+        <input required="required" type="date">
+      </div>
+      <div>
+        <label>Input: Email</label>
+        <input required="required" type="email">
+      </div>
+      <div>
+        <label>Input: Hidden</label>
+        <input type="hidden">
+      </div>
+      <div>
+        <label>Input: Number</label>
+        <input required="required" type="number" step="0.5" max="50">
+      </div>
+      <div>
+        <label>Input: Password</label>
+        <input required="required" type="password">
+      </div>
+      <div>
+        <label>Input: URL</label>
+        <input required="required" type="url">
+      </div>
+      <div>
+        <label>Input: File</label>
+        <input type="file">
+      </div>
+      <div>
+        <label>Submit</label>
+        <input type="submit" value="Custom text for button" name="submit">
+      </div>
+    </form>
+    <br>
+
+<!-- Only one element in the page must have autofocus set, as it can happen only once on page load -->
+    <textarea placeholder="This is placeholder" autofocus="autofocus" cols="100" rows="10">Default text line1
+And line2</textarea>
+    <hr>
+
+    <h3>Buttons</h3>
+    <button type="button">Click me</button>
+    <button type="reset">Reset</button>
+    <button type="submit">Submit</button>
+    <button type="submit" disabled>Submit</button>
+
+    <hr>
+
+    <h3>Dropdown Menus</h3>
+    <p>By setting disabled, it restrics user from selecting that value. If selected is set for an option, it is selected by default and can be changed by user.</p>
+    <select name="selected_item">
+      <option value="" selected disabled="disabled">-- Select Item --</option>
+      <option value="option_1">Opt #1</option>
+      <option value="option_2">Opt #2</option>
+      <option value="option_3">Opt #3</option>
+    </select>
+    <hr>
+
+    <h3>Semantics</h3>
+    <p>Divs were used for most of the cases. HTML5 introduced some more elements for specific uses, so that the code is more understandable:<br>
+      <ol>
+        <li>nav - for navigation bar</li>
+        <li>header - at the top</li>
+        <li>footer - the bottom bar</li>
+        <li>article - for articles</li>
+        <li>aside - side bar</li>
+        <li>details - details like copyright info</li>
+        <li>main - main content section</li>
+        <li>time - time fields in the page</li>
+        <li>mark - highlighted text</li>
+      </ol>
+    <hr>
+
+  </body>
+  
+</html>
